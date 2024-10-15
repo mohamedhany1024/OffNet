@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/materialUI.css">
+</head>
+<body>
+    <div class="screen" id="main">
+        <div class="titleBar">
+            <a href="{{ url_for('index') }}"><img src="/static/img/back_icon.png" width="100"></a>
+            <p>StackOveflow</p>
+            <input type="text" name="" id="search1" class="editText" placeholder="Search" oninput="search()">
+        </div>
+
+
+    </div>
+    <div class="screen" id="QView">
+        <div class="titleBar">
+            <img src="/static/img/back_icon.png" width="50" onclick="openScreen('main')">
+            <p>Question</p>
+
+        </div>
+        <h2 id="QTitle"></h2>
+        <p id="QAnswer"></p>
+    </div>
+
+    <style>
+        .question {
+            margin-bottom: 25px;
+        }
+    </style>
+
+    <script src="/static/js/webUtils.js"></script>
+    <script src="/static/js/libs/jquery/jquery.js"></script>
+    <script src="/static/js/so.js"></script>
+</body>
+</html>

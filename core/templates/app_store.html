@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/lite-material-ui/materialUI.css">
+    <link rel="stylesheet" href="/static/css/apps.css">
+</head>
+<body>
+    <div class="screen" id="main">
+        <div class="titleBar">
+            <a href="{{ url_for('index') }}"><img src="/static/img/back_icon.png" width="100"></a>
+            <p>App Store</p>
+            <input type="text" name="" id="search1" class="editText" placeholder="Search" oninput="search()">
+        </div>
+        <div class="card2 videoFile">
+            <img width="50" src="/static/served/apps/la/com.goldensoft.dictionaryenfree.png" alt="">
+            <a href="/static/served/apps/la/com.goldensoft.dictionaryenfree.apk" download="com.goldensoft.dictionaryenfree.apk">
+                <p>Golden Dictionary - English to Arabic</p>
+            </a>
+        </div>
+
+        
+
+    </div>
+    
+
+    
+
+    <script src="/static/lite-material-ui/webUtils.js"></script>
+    <script src="/static/js/libs/jquery/jquery.js"></script>
+
+    <script>
+        changeProperty('--accent-color', '#689f38');
+        $.get("/listApps", (data) => {
+
+            console.log(data[1][1]);
+            for (i = 0; i < data.length; i++) {
+                document.getElementById("main").innerHTML += `<div id='${i}' onclick='' class='card2 videoFile'><a href='/static/served/apps/${data[i][0]}' download='${data[i][0]}'><p class='' onclick='' id='' app--src=''>${data[i][0]}</p></a><p class='' onclick='' id='' app--src=''>${data[i][0]}</p></div>`;
+                lastVid = i;
+            }
+            document.getElementById("loading").style.display = "none";
+        });
+
+        let search_keyword = "";
+
+        let vids = document.getElementsByClassName("videoFile");
+        let children;
+        let childInnerText;
+
+        function search(e) {
+            search_keyword = document.getElementById("search1").value.toUpperCase();
+            console.log(search_keyword);
+
+            vids = document.getElementsByClassName("videoFile");
+
+            for (i = 0; i < vids.length; i++) {
+                children = vids[i].childNodes;
+                childInnerText = children[1].innerText.toUpperCase();
+                //console.log(children);
+
+                if (childInnerText.indexOf(search_keyword) > -1) {
+                    vids[i].style.display = "block";
+                } else {
+                    vids[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+    
+</body>
+</html>

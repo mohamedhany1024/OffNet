@@ -1,0 +1,23 @@
+﻿{
+  "short_name": "AMAY",
+  "name": "Al Masry Al Youm",
+  "start_url": "",
+  "icons": [
+    {
+      "src": "/content/inc/img/favicons/192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/content/inc/img/favicons/512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+
+    }
+  ],
+  "background_color": "#f6f6f6",
+  "theme_color": "#cb0002",
+  "display": "standalone",
+  "orientation": "portrait"
+}

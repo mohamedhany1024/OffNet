@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OffNet</title>
+    <link rel="stylesheet" href="/static/lite-material-ui/materialUI.css">
+</head>
+
+<body>
+    <div class="screen" id="main">
+        <div class="titleBar">
+            <img src="/static/img/logo_1.png" alt="OffNet Logo" width="100">
+            <p>Welcome To OffNet</p>
+        </div>
+        <div class="container">
+            <h3>Free & unlimited Internet!</h3>
+            <br>
+            <h2>Services</h3>
+            <br>
+            <div class="divider"></div>
+            <div class="flexCont">
+                <a href="{{ url_for('articles') }}">
+                    <div class="card2">
+                        <img src="/static/img/article_icon.png" width="150">
+                        <p>Articles</p>
+                    </div>
+                </a>
+                <a href="{{ url_for('videos') }}">
+                    <div class="card2">
+                        <img src="/static/img/video_icon.png" width="150">
+                        <p>Videos</p>
+                    </div>
+                </a>
+                <a href="{{ url_for('appstore') }}">
+                    <div class="card2">
+                        <img src="/static/img/app_store.png" width="150">
+                        <p>App Store</p>
+                    </div>
+                </a>
+                <a href="{{ url_for('social') }}">
+                    <div class="card2">
+                        <img src="/static/img/social_icon.png" width="150">
+                        <p>Social</p>
+                    </div>
+                </a>
+
+                <a href="{{ url_for('so') }}">
+                    <div class="card2">
+                        <img src="/static/img/social_icon.png" width="150">
+                        <p>Stack Overflow</p>
+
+                    </div>
+                </a>
+
+
+
+            </div>
+        </div>
+
+        <p>Copyright © egsoft inc. 2024-2023</p>
+    </div>
+    <style>
+        .flexCont {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+
+        .flexCont a {
+            padding: 15px;
+            flex-grow: 1;
+            flex-basis: 200;
+        }
+    </style>
+    <script src="/static/lite-material-ui/webUtils.js"></script>
+    <script>
+        changeProperty("--accent-color", "cornflowerblue");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+.titleBar {
+    /* background-color: rgb(255, 80, 103); */
+}
+
+.bottomBar {
+    position: fixed;
+    bottom: 0%;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    background-color: white;
+    box-shadow: 0 0 15px #aaaaaa;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+}
+
+.videoFile {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+#shortsVideoPlayer {
+    width: 100%;
+    height: 85vh;
+    object-fit: contain;
+}
+
+#switcher {
+    position: absolute;
+    right: 0%;
+    z-index: 3;
+    top: 50%;
+    background-color: rgba(132, 255, 194, 0.63);
+    border-radius: 100px;
+    filter: invert();
+    outline: none;
+    transition: all 0.4s ease-out;
+}
+
+
+#switcher:hover {
+    outline: #aaaaaa 3px solid;
+}
+
+#switcher:active {
+    outline: #aaaaaa 3px solid;
+}
+
+
+
+#shorts {
+    background: radial-gradient(circle at 10% 10%, rgb(255, 114, 114), transparent);
+}
+
+.bottom--activated {
+    background-color: rgba(255, 61, 61, 0.459);
+    border-radius: 15px;
+}

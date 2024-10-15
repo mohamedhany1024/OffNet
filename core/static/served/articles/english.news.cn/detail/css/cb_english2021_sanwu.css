@@ -1,0 +1,46 @@
+﻿@charset "utf-8";
+
+.conLeft {
+    float: none;
+    margin: 0 auto;
+}
+
+.talk {
+    height: 60px;
+    padding-left: 265px;
+    background: url(../../2021newxl/images/talkto.jpg) 0 0 no-repeat;
+}
+
+.talk li {
+    float: left;
+}
+
+.talk li+li {
+    padding-left: 15px;
+}
+
+@media screen and (max-width: 767px) {
+    .talk {
+        height: auto;
+        overflow: hidden;
+        padding-left: 0;
+        padding-top:70px;
+        background: url(../../2021newxl/images/talkto.jpg) 0 0 no-repeat;
+    }
+
+    .talk ul {
+    }
+
+    .talk li {
+        float: left;
+    }
+
+    .talk li+li {
+        padding-left: 15px;
+    }
+
+    .content{
+        border: 0;
+    }
+
+}

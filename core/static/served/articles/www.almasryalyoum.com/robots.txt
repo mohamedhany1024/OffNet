@@ -1,0 +1,15 @@
+User-agent: Mediapartners-Google
+Allow: /
+
+user-agent: *
+disallow: /amaylog
+disallow: /amaylogco0I
+disallow: /admin.almasryalyoum.com/
+disallow: /beta.almasryalyoum.com/
+disallow: /beta1.almasryalyoum.com/
+disallow: /beta2.almasryalyoum.com/
+disallow: /amayfrontbeta.sarmady.net/
+disallow: /en/*
+disallow: /channel
+
+

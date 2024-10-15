@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/lite-material-ui/materialUI.css">
+    <link rel="stylesheet" href="/static/css/vids.css">
+</head>
+<body>
+    <div class="screen" id="main">
+        <div class="titleBar">
+            <a href="{{ url_for('index') }}"><img src="/static/img/back_icon.png" width="100"></a>
+            <p>Raspberry-Tube</p>
+            <input id="search1" type="text" class="editText" placeholder="Search" oninput="search()">
+        </div>
+        <br>
+        <button class="btn" onclick="randomVid()">I'm feeling lucky</button>
+        
+        <div class="gridC" id="loading">
+            <img src="/static/img/loading.gif" width="50px">
+        </div>
+    </div>
+
+    <div class="screen" id="video_screen">
+        <video src=""></video>
+        <h3></h3>
+        <video src=""></video>
+        <video src=""></video>
+        <video src=""></video>
+        <video src=""></video>
+        <video src=""></video>
+    </div>
+    <div class="screen" id="shorts">
+        <img id="switcher" class="" onclick="nextVideo()" src="/static/img/down.png" alt="" width="50px">
+        <video controls loop src="" id="shortsVideoPlayer" autoplay></video>
+    </div>
+    <div class="bottomBar grid2">
+        <div class="item bottom--activated" id="videosCont">
+            <img src="/static/img/videos.png" alt="" width="40" onclick="mainVideos()" id="videosImg">
+            <span onclick="mainVideos()">Videos</span>
+        </div>
+        <div class="item" id="shortsCont">
+            <img src="/static/img/shorts.png" alt="" width="40" onclick="shorts()" id="shortsImg">
+            <span onclick="shorts()">Shorts</span>
+        </div>
+    </div>
+
+    <style>
+        .videoFile {
+
+            margin-bottom: 25px;
+            
+        }
+    </style>
+    <script src="/static/js/libs/jquery/jquery.js"></script>
+    <script src="/static/lite-material-ui/webUtils.js"></script>
+    <script src="/static/js/vids.js"></script>
+</body>
+</html>
